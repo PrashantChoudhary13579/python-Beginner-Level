@@ -8,6 +8,7 @@ class Atm:
         self.pin = ""
         self.balance = 0
         self.menu()
+        print(id(self))
     
     def menu(self):
         user_input = input("""
@@ -24,7 +25,7 @@ class Atm:
         elif user_input == "3":
             self.withdraw()
         elif user_input == "4":
-            self.balance()
+            self.check_balance()
         else:
             self.exit()
     
