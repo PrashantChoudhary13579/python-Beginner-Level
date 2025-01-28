@@ -11,6 +11,16 @@ class Atm:
         self.__balance = 0
         self.menu()
 
+    def get_pin(self):
+        return self.__pin
+
+    def set_pin(self, new_pin):
+        if type(new_pin) == int:
+            self.__pin = new_pin
+            print("Pin change")
+        else:
+            print("Not allowed")
+
     def menu(self):
 
         choice = int(input ("""Hello , How would you like to proceed ?
